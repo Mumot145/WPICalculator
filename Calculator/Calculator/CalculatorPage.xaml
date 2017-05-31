@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.CalculatorPage">
+  <Grid RowSpacing="10" ColumnSpacing="10" Padding="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <BoxView Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" BackgroundColor="White" />
+
+    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center"  Text="{Binding fullWPIInput}" FontSize="30"></Label>
+    <Label Grid.Row="0" Grid.Column="2" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"  Text="{Binding calcInput}" FontSize="30"></Label>
+
+    <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="Center"  Text="WPI =" FontSize="30"></Label>
+    <Label Grid.Row="1" Grid.Column="2" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"  Text="{Binding WPI}" FontSize="30"></Label>
+
+    <Button Grid.Row="2" Grid.Column="0" Text="1" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddOne"/>
+    <Button Grid.Row="2" Grid.Column="1" Text="2" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddTwo"/>
+    <Button Grid.Row="2" Grid.Column="2" Text="3" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddThree"/>
+
+    <Button Grid.Row="3" Grid.Column="0" Text="4" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddFour"/>
+    <Button Grid.Row="3"  Grid.Column="1" Text="5" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddFive"/>
+    <Button Grid.Row="3" Grid.Column="2" Text="6" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddSix"/>
+
+    <Button Grid.Row="4" Grid.Column="0" Text="7" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddSeven"/>
+    <Button Grid.Row="4"  Grid.Column="1" Text="8" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddEight"/>
+    <Button Grid.Row="4" Grid.Column="2" Text="9" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddNine"/>
+
+    <Button Grid.Row="5"  Grid.Column="0" Text="DEL" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="Delete"/>
+    <Button Grid.Row="5"  Grid.Column="1" Text="0" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddZero"/>
+    <Button Grid.Row="5"  Grid.Column="2" Text="+" FontSize="30" BorderRadius="30" BackgroundColor = "#FFEC94" TextColor = "#28282c" Clicked="AddParameter"/>
+    
+    <Button BorderRadius="30" Grid.Row="6"  Grid.Column="0" Text="Reset" FontSize="30" TextColor="#28282c" BackgroundColor="#9BD1FA" Clicked="reset"/>
+    <Button BorderRadius="30" Grid.Row="6"  Grid.Column="1" Grid.ColumnSpan="2" Text="Get WPI" FontSize="30" TextColor="#28282c" BackgroundColor="#B0E57C" Clicked="getWPI"/>
+  </Grid>
+</ContentPage>
